@@ -1,18 +1,42 @@
-// Smooth scrolling for navigation links  
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
-    anchor.addEventListener('click', function (e) {  
-        e.preventDefault();  
-        const target = document.querySelector(this.getAttribute('href'));  
-        target.scrollIntoView({  
-            behavior: 'smooth'  
-        });  
-    });  
+// Smooth scrolling for in-page links with safety checks and header offset  
+const header = document.querySelector('header');  
+const headerOffset = header ? header.offsetHeight : 0;
+  
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {  
+  anchor.addEventListener('click', (e) => {  
+    const hash = anchor.getAttribute('href');  
+    if (!hash || hash === '#') return; // ignore empty fragments
+  
+    const target = document.querySelector(hash);  
+    if (!target) return; // do nothing if target doesn't exist
+  
+    e.preventDefault();
+  
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;  
+    const top =  
+      target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+  
+    if (prefersReduced) {  
+      window.scrollTo(0, top);  
+    } else {  
+      window.scrollTo({ top, behavior: 'smooth' });  
+    }
+  
+    // Accessibility: move focus to the target without jumping  
+    target.setAttribute('tabindex', '-1');  
+    target.focus({ preventScroll: true });
+  
+    // Update the URL hash without an abrupt jump  
+    if (history.pushState) history.pushState(null, '', hash);  
+  });  
 });
   
-// Form submission handling  
+// Form submission handling (safe if no form exists)  
 const form = document.querySelector('form');  
-form.addEventListener('submit', function(e) {  
+if (form) {  
+  form.addEventListener('submit', (e) => {  
     e.preventDefault();  
-    alert('Form submitted! (In a real site, this would send data to a server)');  
+    alert('Thanks! This demo form does not send yet.');  
     form.reset();  
-});  
+  });  
+}  
