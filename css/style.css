@@ -96,7 +96,7 @@ footer {
         flex-direction: column;  
         gap: 1rem;  
     }  
-}  
+ 
 .gallery img {  
 2  max-width: 300px;  
 3  height: auto;  
