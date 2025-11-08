@@ -1,48 +1,18 @@
-// Mobile Navigation Toggle
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('toggle');
+// Smooth scrolling for navigation links  
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+    anchor.addEventListener('click', function (e) {  
+        e.preventDefault();  
+        const target = document.querySelector(this.getAttribute('href'));  
+        target.scrollIntoView({  
+            behavior: 'smooth'  
+        });  
+    });  
 });
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-    });
-});
-
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Form submission (you can connect this to a backend service)
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
-
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-    } else {
-        navbar.style.background = 'var(--white)';
-    }
-});
+  
+// Form submission handling  
+const form = document.querySelector('form');  
+form.addEventListener('submit', function(e) {  
+    e.preventDefault();  
+    alert('Form submitted! (In a real site, this would send data to a server)');  
+    form.reset();  
+});  

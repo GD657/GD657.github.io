@@ -1,171 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">MyPortfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-            <p class="tagline">Web Developer | Designer | Creative Thinker</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate web developer with expertise in creating beautiful, functional websites. With a keen eye for design and a love for clean code, I bring ideas to life on the web.</p>
-                    <p>I specialize in front-end development and have experience with modern frameworks and tools. I'm always learning and staying up-to-date with the latest web technologies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Name 1</h3>
-                        <p>Description of your project goes here. Explain what technologies you used and what problem it solves.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn-small">Live Demo</a>
-                            <a href="#" class="btn-small">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Name 2</h3>
-                        <p>Description of your project goes here. Explain what technologies you used and what problem it solves.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn-small">Live Demo</a>
-                            <a href="#" class="btn-small">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x300" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Name 3</h3>
-                        <p>Description of your project goes here. Explain what technologies you used and what problem it solves.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn-small">Live Demo</a>
-                            <a href="#" class="btn-small">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">💻</div>
-                    <h3>HTML & CSS</h3>
-                    <p>Expert in semantic HTML5 and modern CSS3</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">⚡</div>
-                    <h3>JavaScript</h3>
-                    <p>Proficient in vanilla JS and ES6+</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">⚛️</div>
-                    <h3>React</h3>
-                    <p>Building dynamic UIs with React</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Creating user-friendly interfaces</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">📱</div>
-                    <h3>Responsive Design</h3>
-                    <p>Mobile-first approach</p>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🚀</div>
-                    <h3>Performance</h3>
-                    <p>Optimized and fast websites</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <a href="#" class="social-icon">GitHub</a>
-                    <a href="#" class="social-icon">LinkedIn</a>
-                    <a href="#" class="social-icon">Twitter</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>My Website</title>  
+    <link rel="stylesheet" href="css/style.css">  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <ul>  
+                <li><a href="#home">Home</a></li>  
+                <li><a href="#about">About</a></li>  
+                <li><a href="#contact">Contact</a></li>  
+            </ul>  
+        </nav>  
+    </header>
+  
+    <main>  
+        <section id="home">  
+            <h1>Welcome to My Website</h1>  
+            <p>This is my first website built from scratch!</p>  
+        </section>
+  
+        <section id="about">  
+            <h2>About Me</h2>  
+            <p>Your content here...</p>  
+        </section>
+  
+        <section id="contact">  
+            <h2>Contact</h2>  
+            <form>  
+                <input type="text" placeholder="Name" required>  
+                <input type="email" placeholder="Email" required>  
+                <textarea placeholder="Message"></textarea>  
+                <button type="submit">Send</button>  
+            </form>  
+        </section>  
+    </main>
+  
+    <footer>  
+        <p>&copy; 2024 Your Name. All rights reserved.</p>  
     </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  
+    <script src="js/script.js"></script>  
+</body>  
+</html>  
